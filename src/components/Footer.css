@@ -1,0 +1,142 @@
+/* General styles for the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 24px 0;
+}
+
+#logo, #icons{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+#logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.footer .logo-title{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  margin: 0;
+  color: #333;
+}
+
+.footer p {
+  font-family: 'Cormorant Garamond', serif;
+  color: black;
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-link {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.footer-link:hover {
+  color: #7F5A83;
+}
+
+
+@media (max-width: 768px) {
+  .footer{
+    padding: 15px;
+  }
+
+  .footer section {
+    margin :18px;
+  }
+
+  .footer .logo-title {
+    font-size: 2rem; 
+  }
+
+  .footer-link{
+    font-size: 0.85rem;
+    margin: 0 8px;
+
+  }
+
+  #logo, #icons{
+    gap: 6px;
+  }
+
+  #logo img {
+    width: 18px;  
+    height: auto;  
+  }
+
+  #icons img{
+    width: 24px;  
+    height: auto;  
+  }
+
+  .footer p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 496px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer section {
+    margin: 12px;
+  }
+
+  .footer .logo-title {
+    font-size: 0.9rem;
+  }
+
+  .footer-link{
+    font-size: 0.6rem;  
+    margin: 0 4px;
+  }
+
+  #logo, #icons{
+    gap: 4px;
+  }
+
+  #icons{
+    margin-left: 6px;
+  }
+
+  #logo img {
+    width: 12px;  
+    height: auto;  
+  }
+
+  #icons img{
+    width: 18px;  
+    height: auto;  
+  }
+
+  .footer p {
+    font-size: 0.35rem;
+  }
+}
+

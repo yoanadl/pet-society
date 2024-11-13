@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header CSS */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+#logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header .logo-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  margin: 0;
+  color: #333;
+}
+
+.header .header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header .header-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.header .header-link:hover {
+  color: #7F5A83;
+}
+
+
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
+@media (max-width: 768px) {
+  .header .logo-title{
+    font-size: 2rem;
+  }
+
+  #logo {
+    gap: 6px;
+  }
+
+  #icons img{
+    width: 20px;  
+    height: auto;  
+  }
+
+  .header .header-link {
+    font-size: 0.85rem;
+  }
+
+  .header .header-nav {
+    gap: 15px;
+  }
+
+}
+
+@media (max-width: 496px) {
+  .header .logo-title{
+    font-size: 0.9rem;
+  }
+
+  #logo {
+    gap: 3px;
+  }
+
+  #logo img {
+    width: 16px;  
+    height: auto;  
+  }
+
+  .header .header-link {
+    font-size: 0.6rem;
+  }
+
+  .header .header-nav {
+    gap: 10px;
+  }
+
+  .login-modal-content{
+    width: 300px;
+  }
+
+}

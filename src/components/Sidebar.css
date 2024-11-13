@@ -1,0 +1,99 @@
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #9DA2AB;
+    color: white;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .sidebar-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: start;
+    padding: 0px 20px;
+  }
+  
+  .sidebar-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-link {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #555;
+  }
+  
+
+  .sidebar-close-btn {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background: none; 
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .sidebar-close-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .sidebar-close-btn:hover img {
+    filter: brightness(0.8); /* Slight darkening effect on hover */
+  }
+  
+  .sidebar-login-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: left;
+    font-weight: bold;
+    background-color: transparent;
+    color: white; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-login-btn.login {
+    /* border-color: white; */
+    color: white;
+    padding: 0;
+  }
+  
+  .sidebar-login-btn.login:hover {
+    /* background-color: rgb(53, 128, 53); */
+    color: white;
+  }
+  
+  .sidebar-login-btn.logout {
+    /* border-color: red; */
+    color: rgb(255, 90, 90);
+    padding: 0;
+  }
+  
+  .sidebar-login-btn.logout:hover {
+    /* background-color: red; */
+    color: white;
+  }
+  
