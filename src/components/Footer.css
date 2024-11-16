@@ -5,6 +5,7 @@
   text-align: center;
   border-top: 1px solid #ddd;
   margin-top: 40px;
+  font-family: 'cormorant garamond', serif;
 }
 
 footer section {
@@ -29,14 +30,14 @@ footer section {
 }
 
 .footer .logo-title{
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'cormorant garamond', serif;
   font-size: 3rem;
   margin: 0;
   color: #333;
 }
 
 .footer p {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'cormorant garamond', serif;
   color: black;
   margin: 0;
   font-size: 1rem;

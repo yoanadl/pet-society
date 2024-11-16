@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 
 .content {
   flex: 1;
@@ -14,7 +14,7 @@ html, body, #root {
 }
 
 body {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'cormorant garamond', serif;
     background-color: white;
     margin: 0;
     padding: 0;
@@ -25,40 +25,240 @@ body {
   
 main {
   text-align: center;
-  padding: 20px;
   flex: 1;
   min-height: calc(100vh - 100px);
-  padding: 20px;
 }
 
 main p {
-  font-size: 1.2rem;
-  margin: 20px 0;
+  font-size: 1.2em;
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0;
 }
 
-main h1 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 700;
+/* row */
+#buttons, #pet-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
-footer {
-  margin-top: auto;
-  text-align: center;
-  color: #888;
-  font-size: 0.9rem;
+/* column */
+#button-row, #dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar-closed .content {
   margin-left: 0;
 }
+
+.responsive-svg {
+  width: 100%;
+  height: auto;
+}
+
+
+/* page one */
+
+#page-one .carousel {
+  height: 40vh;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+}
+
+#page-one .carousel-item img {
+  transition: transform 1s ease-in-out;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#page-one .carousel-control-prev, 
+#page-one .carousel-control-next {
+  display: none;
+}
+
+#page-one .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #A188A6;
+  border: none;
+}
+
+#page-one .carousel-indicators .active {
+  background-color: #7F5A83;
+}
+
+#page-one .carousel-indicators button:hover {
+  background-color: #7F5A83;
+}
+
+
+/* page two */
+
+#page-two{
+  padding: 20px;
+}
+
+#page-two h1{
+  text-align: left;
+  font-size: 4em;
+}
+
+.link-button {
+  all: unset; 
+  color: blue; 
+  text-decoration: underline; 
+  cursor: pointer;
+}
+
+.link-button:hover {
+  text-decoration: none; 
+  color: darkblue;
+}
+
+
+
+/* page three */
+#page-three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+#homepage-pic{
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 468 / 580;
+  margin-bottom: 20px;
+}
+
+
+#dashboard {
+  width: 100%;
+  max-width: 800px;
+  padding: 1.5em;
+  text-align: center;
+}
+
+#dashboard h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  color:#000000;
+  margin: 0.5em 0;
+}
+
+#dashboard #homepage-title {
+  font-size: 2em;
+}
+
+#dashboard #homepage-desc {
+  padding: 1em 0;
+  line-height: 1.5;
+}
+
+
+#buttons{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+#buttons #button {
+  width: 200px;
+  height: 200px;
+  border: 1px solid salmon;
+  margin: 1em;
+
+  background-color: none;
+  color: #333;
+  border: none;
+
+}
+
+
+#buttons button{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+
+#buttons button:hover{
+  background-color: #A188A6 ;
+  border: 2px solid #A188A6;
+}
+
+button:hover .icon path {
+  fill: white; 
+}
+
+#buttons h1 {
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+#buttons p {
+  font-size: 1em;
+  color: #555;
+}
+
+
+@media (max-width: 600px) {
+  #homepage-pic {
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+
+  #dashboard h1 {
+    font-size: 1.8em;
+  }
+
+  #buttons {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  #buttons button {
+    width: 80px;
+    height: 80px;
+  }
+
+  #buttons h1 {
+    font-size: 0.9em;
+  }
+
+  #buttons p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1024px) {
+  #page-three {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  #buttons {
+    gap: 15px;
+  }
+
+  #dashboard h1 {
+    font-size: 1.2em;
+  }
+}
+
+
+
+

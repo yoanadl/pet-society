@@ -1,0 +1,101 @@
+[
+    {
+      "name": "Buddy",
+      "age": 3,
+      "type": "dog",
+      "breed": "Golden Retriever",
+      "personalities": ["Friendly", "Energetic", "Loyal"]
+    },
+    {
+      "name": "Whiskers",
+      "age": 2,
+      "type": "cat",
+      "breed": "Siamese",
+      "personalities": ["Curious", "Playful", "Affectionate"]
+    },
+    {
+      "name": "Milo",
+      "age": 4,
+      "type": "dog",
+      "breed": "Bulldog",
+      "personalities": ["Calm", "Loyal", "Stubborn"]
+    },
+    {
+      "name": "Bella",
+      "age": 5,
+      "type": "cat",
+      "breed": "Maine Coon",
+      "personalities": ["Independent", "Affectionate", "Gentle"]
+    },
+    {
+      "name": "Max",
+      "age": 1,
+      "type": "dog",
+      "breed": "Beagle",
+      "personalities": ["Friendly", "Active", "Curious"]
+    },
+    {
+      "name": "Luna",
+      "age": 3,
+      "type": "cat",
+      "breed": "Persian",
+      "personalities": ["Lazy", "Affectionate", "Quiet"]
+    },
+    {
+      "name": "Rex",
+      "age": 7,
+      "type": "dog",
+      "breed": "German Shepherd",
+      "personalities": ["Loyal", "Protective", "Intelligent"]
+    },
+    {
+      "name": "Simba",
+      "age": 2,
+      "type": "cat",
+      "breed": "Bengal",
+      "personalities": ["Energetic", "Curious", "Playful"]
+    },
+    {
+      "name": "Daisy",
+      "age": 6,
+      "type": "dog",
+      "breed": "Dachshund",
+      "personalities": ["Stubborn", "Friendly", "Affectionate"]
+    },
+    {
+      "name": "Oscar",
+      "age": 1,
+      "type": "cat",
+      "breed": "Scottish Fold",
+      "personalities": ["Quiet", "Affectionate", "Loyal"]
+    },
+    {
+      "name": "Sadie",
+      "age": 4,
+      "type": "dog",
+      "breed": "Labrador Retriever",
+      "personalities": ["Friendly", "Loyal", "Playful"]
+    },
+    {
+      "name": "Tigger",
+      "age": 3,
+      "type": "cat",
+      "breed": "Tabby",
+      "personalities": ["Curious", "Playful", "Affectionate"]
+    },
+    {
+      "name": "Charlie",
+      "age": 2,
+      "type": "dog",
+      "breed": "Poodle",
+      "personalities": ["Intelligent", "Energetic", "Friendly"]
+    },
+    {
+      "name": "Misty",
+      "age": 5,
+      "type": "cat",
+      "breed": "British Shorthair",
+      "personalities": ["Independent", "Gentle", "Playful"]
+    }
+  ]
+  

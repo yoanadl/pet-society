@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Login.css';
+import { AuthContext } from '../services/AuthContext.js';
 
-function Login({ onLogin, onCloseModal }) {
+function Login({ onCloseModal }) {
+  const { login } = useContext(AuthContext); // Use the login function from context
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
-
-  const users = [
-    { email: 'admin@mail.com', password: 'admin', role: 'admin' },
-    { email: 'user@mail.com', password: 'user', role: 'user' },
-  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,18 +17,17 @@ function Login({ onLogin, onCloseModal }) {
       return;
     }
 
-    const user = users.find(user => user.email === email && user.password === password);
+    const { success, role } = login(email, password);
 
-    if (user) {
-      onLogin(email, password, user.role);
+    if (success) {
       setSuccessMessage('You have successfully logged in!');
-      onCloseModal();
-
+      setError('');
+      onCloseModal(); // Close the modal
       setEmail('');
       setPassword('');
-      setError('');
     } else {
       setError('Invalid credentials');
+      setSuccessMessage('');
     }
   };
 
@@ -60,10 +56,10 @@ function Login({ onLogin, onCloseModal }) {
             placeholder="Enter your password"
           />
         </div>
-        <div class="button">
+        <div className="button">
           <button type="submit" className="login-button">Login</button>
         </div>    
-  </form>
+      </form>
 
       {successMessage && <div className="success-message">{successMessage}</div>}
     </div>
