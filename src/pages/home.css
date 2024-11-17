@@ -183,6 +183,10 @@ main p {
 
 }
 
+#buttons #button-row {
+  gap: 2em;
+}
+
 
 #buttons button{
   width: 100px;

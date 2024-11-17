@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Login.css';
 import { AuthContext } from '../services/AuthContext.js';
 
@@ -8,6 +8,14 @@ function Login({ onCloseModal }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+
+  useEffect(() => {
+    // Auto-open modal when component mounts
+    const modal = document.querySelector('.login-container');
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +30,9 @@ function Login({ onCloseModal }) {
     if (success) {
       setSuccessMessage('You have successfully logged in!');
       setError('');
-      onCloseModal(); // Close the modal
+      setTimeout(() => {
+        onCloseModal(); // Close modal after success message
+      }, 1000); // 1-second delay for the user to see the success message
       setEmail('');
       setPassword('');
     } else {
@@ -32,36 +42,38 @@ function Login({ onCloseModal }) {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit} className="login-form">
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
-          />
-        </div>
-        <div className="button">
-          <button type="submit" className="login-button">Login</button>
-        </div>    
-      </form>
-
-      {successMessage && <div className="success-message">{successMessage}</div>}
+    <div className="login-modal">
+      <div className="login-container">
+        <button className="close-btn" onClick={onCloseModal}>X</button>
+        <h2>Login</h2>
+        {error && <div className="error">{error}</div>}
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
+            />
+          </div>
+          <div className="button">
+            <button type="submit" className="login-button">Login</button>
+          </div>    
+        </form>
+        {successMessage && <div className="success-message">{successMessage}</div>}
+      </div>
     </div>
   );
 }

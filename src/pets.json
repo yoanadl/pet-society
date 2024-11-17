@@ -1,101 +1,114 @@
 [
-    {
-      "name": "Buddy",
-      "age": 3,
-      "type": "dog",
-      "breed": "Golden Retriever",
-      "personalities": ["Friendly", "Energetic", "Loyal"]
-    },
-    {
-      "name": "Whiskers",
-      "age": 2,
-      "type": "cat",
-      "breed": "Siamese",
-      "personalities": ["Curious", "Playful", "Affectionate"]
-    },
-    {
-      "name": "Milo",
-      "age": 4,
-      "type": "dog",
-      "breed": "Bulldog",
-      "personalities": ["Calm", "Loyal", "Stubborn"]
-    },
-    {
-      "name": "Bella",
-      "age": 5,
-      "type": "cat",
-      "breed": "Maine Coon",
-      "personalities": ["Independent", "Affectionate", "Gentle"]
-    },
-    {
-      "name": "Max",
-      "age": 1,
-      "type": "dog",
-      "breed": "Beagle",
-      "personalities": ["Friendly", "Active", "Curious"]
-    },
-    {
-      "name": "Luna",
-      "age": 3,
-      "type": "cat",
-      "breed": "Persian",
-      "personalities": ["Lazy", "Affectionate", "Quiet"]
-    },
-    {
-      "name": "Rex",
-      "age": 7,
-      "type": "dog",
-      "breed": "German Shepherd",
-      "personalities": ["Loyal", "Protective", "Intelligent"]
-    },
-    {
-      "name": "Simba",
-      "age": 2,
-      "type": "cat",
-      "breed": "Bengal",
-      "personalities": ["Energetic", "Curious", "Playful"]
-    },
-    {
-      "name": "Daisy",
-      "age": 6,
-      "type": "dog",
-      "breed": "Dachshund",
-      "personalities": ["Stubborn", "Friendly", "Affectionate"]
-    },
-    {
-      "name": "Oscar",
-      "age": 1,
-      "type": "cat",
-      "breed": "Scottish Fold",
-      "personalities": ["Quiet", "Affectionate", "Loyal"]
-    },
-    {
-      "name": "Sadie",
-      "age": 4,
-      "type": "dog",
-      "breed": "Labrador Retriever",
-      "personalities": ["Friendly", "Loyal", "Playful"]
-    },
-    {
-      "name": "Tigger",
-      "age": 3,
-      "type": "cat",
-      "breed": "Tabby",
-      "personalities": ["Curious", "Playful", "Affectionate"]
-    },
-    {
-      "name": "Charlie",
-      "age": 2,
-      "type": "dog",
-      "breed": "Poodle",
-      "personalities": ["Intelligent", "Energetic", "Friendly"]
-    },
-    {
-      "name": "Misty",
-      "age": 5,
-      "type": "cat",
-      "breed": "British Shorthair",
-      "personalities": ["Independent", "Gentle", "Playful"]
-    }
-  ]
-  
+  {
+    "name": "Buddy",
+    "age": 3,
+    "type": "Dog",
+    "breed": "Golden Retriever",
+    "description": "Buddy is a friendly and energetic dog who loves to play and is deeply loyal to his family.",
+    "picture": "./buddy.jpg"
+  },
+  {
+    "name": "Whiskers",
+    "age": 2,
+    "type": "Cat",
+    "breed": "Siamese",
+    "description": "Whiskers is a curious and playful cat with a love for exploring and showing affection.",
+    "picture": "./whiskers.jpeg"
+  },
+  {
+    "name": "Milo",
+    "age": 4,
+    "type": "Dog",
+    "breed": "Bulldog",
+    "description": "Milo is a calm and loyal companion, though he can be a bit stubborn at times.",
+    "picture": "./milo.jpeg"
+  },
+  {
+    "name": "Bella",
+    "age": 5,
+    "type": "Cat",
+    "breed": "Maine Coon",
+    "description": "Bella is an independent yet affectionate cat with a gentle and loving nature.",
+    "picture": "./bella.jpeg"
+  },
+  {
+    "name": "Max",
+    "age": 1,
+    "type": "Dog",
+    "breed": "Beagle",
+    "description": "Max is a friendly and active puppy who loves to explore and is full of curiosity.",
+    "picture": "./max.jpg"
+  },
+  {
+    "name": "Luna",
+    "age": 3,
+    "type": "Cat",
+    "breed": "Persian",
+    "description": "Luna is a quiet and affectionate cat who enjoys relaxing and spending time with her family.",
+    "picture": "./luna.jpg"
+  },
+  {
+    "name": "Rex",
+    "age": 7,
+    "type": "Dog",
+    "breed": "German Shepherd",
+    "description": "Rex is a loyal and intelligent protector who is always alert and devoted to his family.",
+    "picture": "./rex.jpg"
+  },
+  {
+    "name": "Simba",
+    "age": 2,
+    "type": "Cat",
+    "breed": "Bengal",
+    "description": "Simba is an energetic and playful cat who loves to explore and is always curious about the world.",
+    "picture": "./simba.jpg"
+  },
+  {
+    "name": "Daisy",
+    "age": 6,
+    "type": "Dog",
+    "breed": "Dachshund",
+    "description": "Daisy is a friendly and affectionate dog with a stubborn streak, but she is always loving.",
+    "picture": "./daisy.jpg"
+  },
+  {
+    "name": "Oscar",
+    "age": 1,
+    "type": "Cat",
+    "breed": "Scottish Fold",
+    "description": "Oscar is a quiet and loving cat who enjoys spending time with family and being close to his humans.",
+    "picture": "./oscar.jpg"
+  },
+  {
+    "name": "Sadie",
+    "age": 4,
+    "type": "Dog",
+    "breed": "Labrador Retriever",
+    "description": "Sadie is a playful and loyal dog who loves making friends and is always up for an adventure.",
+    "picture": "./saddie.jpg"
+  },
+  {
+    "name": "Tigger",
+    "age": 3,
+    "type": "Cat",
+    "breed": "Tabby",
+    "description": "Tigger is a curious and playful cat who loves interacting with people and exploring new places.",
+    "picture": "./tigger.jpg"
+  },
+  {
+    "name": "Charlie",
+    "age": 2,
+    "type": "Dog",
+    "breed": "Poodle",
+    "description": "Charlie is an intelligent and energetic dog with a friendly personality and a love for fun.",
+    "picture": "./charlie.jpg"
+  },
+  {
+    "name": "Misty",
+    "age": 5,
+    "type": "Cat",
+    "breed": "British Shorthair",
+    "description": "Misty is a gentle and independent cat who enjoys quiet moments but also loves to play.",
+    "picture": "./misty.jpg"
+  }
+]
