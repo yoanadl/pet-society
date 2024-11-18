@@ -15,6 +15,11 @@ function Footer() {
     navigate('/forms'); 
   };
 
+  const goToAboutUs = () => {
+    navigate('/aboutUs'); 
+  };
+
+
 
   return (
     
@@ -29,12 +34,10 @@ function Footer() {
         </div>
 
         <nav className="footer-nav">
-          <a href="#about-us" className="footer-link">About Us</a>
+          <a href="#about-us" className="footer-link" onClick={(e) => { e.preventDefault(); goToAboutUs(); }} >About Us</a>
           <a href="#services" className="footer-link">Services</a>
           <a href="#faqs" className="footer-link">FAQs</a>
-          <a href="#" id="forms" className="footer-link" onClick={(e) => { e.preventDefault(); goToForm(); }}>
-            Forms
-          </a>          
+          <a href="#" id="forms" className="footer-link" onClick={(e) => { e.preventDefault(); goToForm(); }}>Forms</a>          
         </nav>
 
         <div id='icons'>

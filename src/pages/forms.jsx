@@ -35,6 +35,7 @@ const Forms = () => {
           <label htmlFor="name">Address:</label>
           <input type="text" id="name" name="name" />
           <br />
+          {/* only number  */}
           <label htmlFor="name">Phone Number:</label>
           <input type="text" id="name" name="name" />
           <br />
@@ -44,16 +45,20 @@ const Forms = () => {
           <label htmlFor="name">Type of Housing</label> 
           <input type="text" id="name" name="name" />
           <br />
-          <label htmlFor="name">Own or Rent Home</label>
+          {/* no, yes with field */}
+          <label htmlFor="name">Own or Rent Home &lpar;If rent, please provide landlord's contact information for verification&rpar;</label>
           <input type="text" id="name" name="name" />
           <br />
-          <label htmlFor="name">Do you have any outer space/yard?</label>
+          {/* yes, no */}
+          <label htmlFor="name">Do you have any outdoor space/yard?</label>
           <input type="text" id="name" name="name" />
           <br />
-          <label htmlFor="name">Own or Rent Home</label>
+          {/* yes, no with field */}
+          <label htmlFor="name">Are pets allowed in your home or complex? &lpar;Yes / No&rpar; </label>
           <input type="text" id="name" name="name" />
           <br />
-          <label htmlFor="name">Own or Rent Home</label>
+
+          <label htmlFor="name">Do you currently have any other pets? </label>
           <input type="text" id="name" name="name" />
           <br />
           <label htmlFor="name">Own or Rent Home</label>
