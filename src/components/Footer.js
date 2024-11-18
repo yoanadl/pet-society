@@ -4,10 +4,20 @@ import pawIcon from '../assets/paw.svg';
 import fbIcon from '../assets/facebook.svg';
 import igIcon from '../assets/instagram.svg';
 import ttIcon from '../assets/tiktok.svg';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Footer() {
+
+  const navigate = useNavigate();
+  const goToForm = () => {
+    navigate('/forms'); 
+  };
+
+
   return (
+    
     <footer className="footer">
       <section>
         <div id="logo-section"> 
@@ -22,7 +32,9 @@ function Footer() {
           <a href="#about-us" className="footer-link">About Us</a>
           <a href="#services" className="footer-link">Services</a>
           <a href="#faqs" className="footer-link">FAQs</a>
-          <a href="#forms" className="footer-link">Forms</a>
+          <a href="#" id="forms" className="footer-link" onClick={(e) => { e.preventDefault(); goToForm(); }}>
+            Forms
+          </a>          
         </nav>
 
         <div id='icons'>

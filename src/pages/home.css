@@ -36,18 +36,12 @@ main p {
 }
 
 /* row */
-#buttons, #pet-list{
+#pet-list{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* column */
-#button-row, #dashboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .sidebar-closed .content {
   margin-left: 0;
@@ -120,8 +114,8 @@ main p {
 }
 
 
+/* page-three */
 
-/* page three */
 #page-three {
   display: flex;
   flex-direction: column;
@@ -130,13 +124,12 @@ main p {
   gap: 20px;
 }
 
-#homepage-pic{
+#homepage-pic {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 468 / 580;
   margin-bottom: 20px;
 }
-
 
 #dashboard {
   width: 100%;
@@ -149,7 +142,7 @@ main p {
   font-family: "Libre Baskerville", serif;
   font-weight: bold;
   font-size: 1.8em;
-  color:#000000;
+  color: #000000;
   margin: 0.5em 0;
 }
 
@@ -162,33 +155,34 @@ main p {
   line-height: 1.5;
 }
 
-
-#buttons{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   width: 100%;
-  justify-content: center;
 }
 
-#buttons #button {
+#button-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#button {
   width: 200px;
   height: 200px;
   border: 1px solid salmon;
   margin: 1em;
-
   background-color: none;
   color: #333;
   border: none;
-
+  text-align: center;
 }
 
-#buttons #button-row {
-  gap: 2em;
-}
-
-
-#buttons button{
+#buttons button {
   width: 100px;
   height: 100px;
   margin: 0 auto 10px;
@@ -199,14 +193,13 @@ main p {
   transition: background-color 0.3s;
 }
 
-
-#buttons button:hover{
-  background-color: #A188A6 ;
+#buttons button:hover {
+  background-color: #A188A6;
   border: 2px solid #A188A6;
 }
 
 button:hover .icon path {
-  fill: white; 
+  fill: white;
 }
 
 #buttons h1 {
@@ -219,7 +212,6 @@ button:hover .icon path {
   color: #555;
 }
 
-
 @media (max-width: 600px) {
   #homepage-pic {
     max-width: 100%;
@@ -231,7 +223,11 @@ button:hover .icon path {
   }
 
   #buttons {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  #button-row {
+    flex-direction: column;
   }
 
   #buttons button {
@@ -262,7 +258,3 @@ button:hover .icon path {
     font-size: 1.2em;
   }
 }
-
-
-
-

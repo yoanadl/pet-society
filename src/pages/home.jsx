@@ -10,11 +10,11 @@ import { Carousel } from 'react-bootstrap';
 
 import { AuthContext } from '../services/AuthContext.js';
 
-import Dog from '../assets/dog_hp1.png';
 import { ReactComponent as DogIcon } from '../assets/dog.svg';
 import { ReactComponent as AdoptIcon } from '../assets/adoption.svg';
 import { ReactComponent as ReleaseIcon } from '../assets/release.svg';
 import { ReactComponent as DonateIcon } from '../assets/donation.svg';
+import { ReactComponent as VolunteerIcon } from '../assets/volunteer.svg';
 
 function Home() {
   const { isLoggedIn, role, handleLogin, handleLogout } = useContext(AuthContext); // Access auth context
@@ -114,6 +114,7 @@ function Home() {
               <p id="homepage-desc">
                 Looking to give a furry friend a loving home? At Pet Society, we are dedicated to helping animals in need find their forever families. Our shelter provides a safe and nurturing environment for rescued pets, offering them the care and love they deserve while they await adoption.
               </p>
+
               <section id="buttons">
                 <div id="button-row">
                   <div id="button">
@@ -121,44 +122,43 @@ function Home() {
                       <DogIcon width="50px" height="50px" className="icon" />
                     </button>
                     <h1>Our Pets</h1>
-                    <p> 
-                      Check your pet-mate! Might find the perfect one
-                    </p>
+                    <p>Check your pet-mate! Might find the perfect one</p>
                   </div>
 
                   <div id="button">
                     <button>
                       <ReleaseIcon width="50px" height="50px" className="icon" />
-                    </button>  
-                    <h1>Release Your Pet</h1>
-                    <p> 
-                      Can't handle it? We are here for you and your pet
-                    </p>  
+                    </button>
+                    <h1>Release Pet</h1>
+                    <p>Can't handle it? We are here for you and your pet</p>
                   </div>
-                </div>
 
-                <div id="button-row">
                   <div id="button">
                     <button> 
                       <AdoptIcon width="50px" height="50px" className="icon" />
-                    </button> 
+                    </button>
                     <h1>Adoption</h1>
-                    <p> 
-                      Ready to have your pet? Get to know on how we do it 
-                    </p>
+                    <p>Ready to have your pet? Get to know on what to prepare</p>
                   </div>
 
                   <div id="button">
                     <button>
                       <DonateIcon width="50px" height="50px" className="icon" />
-                    </button> 
+                    </button>
                     <h1>Donation</h1>
-                    <p> 
-                      Help us care for them, your support makes a difference!
-                    </p>
+                    <p>Help us care for them, your support makes a difference!</p>
+                  </div>
+
+                  <div id="button">
+                    <button>
+                      <VolunteerIcon width="50px" height="50px" className="icon" />
+                    </button>
+                    <h1>Volunteer</h1>
+                    <p>Join us in making a difference! Check the criteria and find your perfect slot today.</p>
                   </div>
                 </div>
-              </section> 
+            </section>
+
             </div>
           </section>
         </main>
