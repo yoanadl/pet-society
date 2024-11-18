@@ -161,6 +161,29 @@ function Home() {
 
             </div>
           </section>
+
+
+          <section id="page-four">
+            <h1>About Us</h1>
+
+            <p>
+              At Pet Society, we believe every pet deserves a loving home. We’re here to help connect amazing pets with people who are ready to welcome them into their lives. Whether you’re looking for a playful puppy, a cuddly cat, or a senior pet who just wants to relax by your side, we’re here to make the adoption process simple and enjoyable.
+            </p>
+
+            <h2>Our Mission</h2>
+            <p>
+              Our goal is to give homeless pets a second chance and help them find families who will love and care for them. We work with shelters and rescues to showcase pets that are ready for adoption, making it easier for you to find your perfect match.
+            </p>
+
+            <h2>How It Works</h2>
+            <p>
+              Browse through our listings to find pets near you, learn about their personalities, and see which one feels like the right fit for your home.
+              
+              Once you’re ready, we’ll guide you through the adoption process.
+            </p>
+
+
+          </section>
         </main>
         <Footer />
       </div>
