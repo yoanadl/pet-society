@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './home.css';
@@ -7,7 +7,6 @@ import Footer from '../components/Footer.js';
 import Login from '../components/Login.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-
 import { AuthContext } from '../services/AuthContext.js';
 
 import { ReactComponent as DogIcon } from '../assets/dog.svg';
@@ -17,7 +16,7 @@ import { ReactComponent as DonateIcon } from '../assets/donation.svg';
 import { ReactComponent as VolunteerIcon } from '../assets/volunteer.svg';
 
 function Home() {
-  const { isLoggedIn, role, handleLogin, handleLogout } = useContext(AuthContext); // Access auth context
+  const { isLoggedIn, role, handleLogin, logout } = useContext(AuthContext); // Access auth context
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -30,9 +29,23 @@ function Home() {
     setIsModalOpen(false);
   };
 
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  }
+
   const goToPetList = () => {
     navigate('/petlist'); 
   };
+
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    setUsers(storedUsers);
+  }, []);
+
 
   return (
     <div className={`app-container ${isLoggedIn ? 'Logout' : 'Login'}`}>
@@ -44,6 +57,32 @@ function Home() {
           role={role}
         />
         <main>
+        <div>
+      <h1>Registered Users</h1>
+      {users.length > 0 ? (
+        <table border="1" style={{ width: '100%', textAlign: 'left' }}>
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user, index) => (
+              <tr key={index}>
+                <td>{user.email}</td>
+                <td>{user.password}</td>
+                <td>{user.role}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>No users registered.</p>
+      )}
+    </div>
+    
           <section id="page-one"> 
             <Carousel>
               <Carousel.Item>

@@ -1,102 +1,132 @@
-import React, { useState } from 'react';
+import React, {useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './forms.css';
+import { AuthContext } from '../services/AuthContext.js';
+import Form1 from './Form1.js';
+
 
 const Forms = () => {
-  // State to keep track of the selected form
+
+  const { isLoggedIn, userEmail } = useContext(AuthContext);
+
   const [selectedForm, setSelectedForm] = useState('form1');
 
-  // Handler for changing the dropdown selection
-  const handleFormChange = (e) => {
-    setSelectedForm(e.target.value);
+  const [formData, setFormData] = useState({
+    //personal info
+    fullName:'',
+    email: '',
+    address: '',
+    phone: '',
+
+    //livingsituation
+    housingType: 'House',
+    otherHousing: '',
+    homeOwnership: '',
+    landlordInfo: '',
+    outdoorSpace: '',
+    petsAllowed: '',
+    otherPets: '',
+    otherPetsDesc: '',
+
+    // employement and lifestyle
+    hoursAlone: '',
+    travel: '',
+    ownedPets: '',
+    petCareExperience: '',
+    petReason: '',
+    interestedInDog: false,
+    interestedInCat: false,
+    interestedInOther: false,
+    interestedCustom: '',
+    petAge: '',
+    petAgePreference: '',
+    petGenderPreference: '',
+
+    //health and safety
+    accessToVet: '',
+    vetCare: '',
+    petLocation: '',
+    familyAllergies: '',
+
+    //commitment to welfare
+    longTermCommitment: '',
+    unableToCarePlan: '',
+
+    //adoption process
+    adoptionFee: '',
+    homeVisit: '',
+    shelterGuidelines: '',
+  });
+
+
+  const handleFormChange = (e) => {setSelectedForm(e.target.value);};
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+  
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value, 
+    }));
   };
 
+
+  console.log(formData);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("User Email:", userEmail); 
+
+    if (!userEmail) {
+      alert("Please enter a valid email or user ID to associate the form.");
+      return;
+    }
+
+    const existingData = JSON.parse(localStorage.getItem(userEmail)) || [];
+    existingData.push(formData);
+    localStorage.setItem(userEmail, JSON.stringify(existingData));
+
+    
+    alert("Form data saved!");
+  };
+
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate('/'); 
+  };
+
+
+
+  
+  
+  if (!isLoggedIn) {
+    return (
+      <div id="forms-div">
+        <h1>Access Denied</h1>
+        <p>You must be logged in to access this page.</p>
+        <button onClick={() => navigate('/')}>Go to Login</button>
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div id="forms-div">
+
       <h1>Forms Page</h1>
 
-      {/* Dropdown Menu */}
+      <button onClick={goToHome} className="link-button">&lt; Back</button>
+
+
       <select value={selectedForm} onChange={handleFormChange}>
-        <option value="form1">Form 1</option>
-        <option value="form2">Form 2</option>
-        <option value="form3">Form 3</option>
+        <option value="form1">Adoption</option>
+        <option value="form2">Releasing a Pet</option>
+        <option value="form3">Volunteer</option>
       </select>
 
       {/* Display form based on selected option */}
       {selectedForm === 'form1' && (
-        <form>
-          <h2>Adoption</h2>
-
-          <h2>Personal Information</h2>
-          <label htmlFor="name">Full Name:</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" />
-          <br />
-          <label htmlFor="name">Address:</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          {/* only number  */}
-          <label htmlFor="name">Phone Number:</label>
-          <input type="text" id="name" name="name" />
-          <br />
-
-          <h2>Living Situation</h2>
-          {/* dropdown, house/apartement/rural or farm */}
-          <label htmlFor="name">Type of Housing</label> 
-          <input type="text" id="name" name="name" />
-          <br />
-          {/* no, yes with field */}
-          <label htmlFor="name">Own or Rent Home &lpar;If rent, please provide landlord's contact information for verification&rpar;</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          {/* yes, no */}
-          <label htmlFor="name">Do you have any outdoor space/yard?</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          {/* yes, no with field */}
-          <label htmlFor="name">Are pets allowed in your home or complex? &lpar;Yes / No&rpar; </label>
-          <input type="text" id="name" name="name" />
-          <br />
-
-          <label htmlFor="name">Do you currently have any other pets? </label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label htmlFor="name">Own or Rent Home</label>
-          <input type="text" id="name" name="name" />
-          <br />
-
-          <button type="submit">Submit</button>
-        </form>
+        <Form1 formData={formData} handleInputChange={handleInputChange} handleSubmit={handleSubmit} />
       )}
 
       {selectedForm === 'form2' && (

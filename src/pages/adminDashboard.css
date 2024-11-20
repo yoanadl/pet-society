@@ -1,0 +1,58 @@
+.admin-dashboard {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .form-data-container {
+    margin-top: 20px;
+  }
+  
+  .form-data {
+    margin-top: 10px;
+  }
+  
+  .data-item {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .data-item span {
+    margin-left: 10px;
+    font-style: italic;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+
+  .clear-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .clear-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* adminDashboard.css */
+
+/* Style for logout button */
+.logout-button {
+  background-color: #d9534f; /* Bootstrap's danger color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.logout-button:hover {
+  background-color: #c9302c; /* Darker shade for hover effect */
+}

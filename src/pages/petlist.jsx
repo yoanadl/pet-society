@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { AuthContext } from '../services/AuthContext.js'; 
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar.js'; 
 import petsData from '../pets.json';
 import './petlist.css';
 
+
+// remove check log in in this
 function PetList() {
-  const { isLoggedIn, role, userEmail } = useContext(AuthContext); 
   const [pets, setPets] = useState([]);
   const [selectedPet, setSelectedPet] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -17,19 +17,12 @@ function PetList() {
   }, []);
 
   const handleSelectPet = (pet) => {
-    if (!isLoggedIn) {
-      alert('You need to log in to select a pet.');
-      return;
-    }
+
     setSelectedPet(pet);
     setShowModal(false); // Ensure modal is closed on single click
   };
 
   const handleDoubleClickPet = (pet) => {
-    if (!isLoggedIn) {
-      alert('You need to log in to view pet details.');
-      return;
-    }
     setModalPet(pet);
     setShowModal(true); // Open modal on double-click
   };
@@ -56,14 +49,7 @@ function PetList() {
 
         <button onClick={goToHome} className="link-button">&lt; Back</button>
 
-        {isLoggedIn ? (
-          <div>
-            <p>Welcome, {role}!</p>
-            <p>Your email: {userEmail}</p>
-          </div>
-        ) : (
-          <p>You are not logged in. Please log in to access more features.</p>
-        )}
+      
 
         <div className="petlist-content">
           <h2>Available Pets</h2>
@@ -75,7 +61,7 @@ function PetList() {
                 onClick={() => handleSelectPet(pet)}
                 onDoubleClick={() => handleDoubleClickPet(pet)}
               >
-                <img src={pet.picture} alt={`Image of ${pet.name}`} className="pet-image" />
+                <img src={pet.picture} alt={`${pet.name}`} className="pets" />
                 <h3>{pet.name}</h3>
                 <p>Age: {pet.age}</p>
                 <p>Type: {pet.type}</p>
@@ -85,8 +71,8 @@ function PetList() {
           </div>
         </div>
 
-        <div className="selected-pet-info">
-          <h2>Selected Pet</h2>
+        {/* <div className="selected-pet-info">
+          {/* <h2>Selected Pet</h2>
           {selectedPet ? (
             <div className="selected-pet">
               <p>
@@ -97,7 +83,7 @@ function PetList() {
           ) : (
             <p>No pet selected.</p>
           )}
-        </div>
+        </div> */} 
       </div>
 
       {/* Modal for Pet Description */}

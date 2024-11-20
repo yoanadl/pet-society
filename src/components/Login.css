@@ -71,6 +71,17 @@ input:focus {
   text-align: center;
 }
 
+.register-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register-link:hover {
+  color: #0056b3;
+}
+
+
 @media (max-width: 496px) {
   .login-container{
     width: 250px;

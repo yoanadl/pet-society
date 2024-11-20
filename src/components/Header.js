@@ -17,7 +17,11 @@ function Header({ isLoggedIn, onLogout, openLoginModal }) {
         {!isLoggedIn ? (
           <a href="#login" className="header-link" onClick={openLoginModal}>Login</a>
         ) : (
-          <a href="#logout" className="header-link" onClick={onLogout}>Logout</a>
+          <div className='header-nav'> 
+            <a href="#myform" className="header-link">My Form</a>
+            <a href="#logout" className="header-link" onClick={onLogout}>Logout</a>
+          </div>
+         
         )}
       </nav>
     </header>
