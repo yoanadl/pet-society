@@ -1,0 +1,153 @@
+.donation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0; 
+    background-color: white;
+    color: #7F5A83;
+    font-family: Source Sans, sans-serif;
+    min-height: 100%; 
+    width: 100%;
+}
+
+.donation > div {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px; 
+}
+
+.donation h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    text-align: center;
+    color: #7F5A83;
+    font-weight: bold;
+}
+
+.donation p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.donation img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.donation .link-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #7F5A83;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donation .link-button:hover {
+    background-color: white;
+    color: #3498db;
+}
+
+.urgent-list {
+    background-color: #f4f6f7;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add bottom spacing for breathing room */
+}
+
+.urgent-list h2 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.urgent-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.urgent-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.urgent-list li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    .donation {
+        padding: 10px;
+    }
+
+    .donation h1 {
+        font-size: 2em;
+        margin: 15px 0;
+    }
+
+    .donation p {
+        font-size: 14px;
+    }
+
+    .donation > div {
+        padding: 15px;
+    }
+
+    .link-button {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .urgent-list {
+        padding: 15px;
+    }
+
+    .urgent-list h2 {
+        font-size: 1.2em;
+    }
+
+    .urgent-list li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .donation h1 {
+        font-size: 1.8em;
+    }
+
+    .donation p {
+        font-size: 12px;
+    }
+
+    .urgent-list h2 {
+        font-size: 1.1em;
+    }
+
+    .urgent-list li {
+        font-size: 13px;
+    }
+}

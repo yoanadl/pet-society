@@ -1,12 +1,104 @@
 // Form1.js
 import React, { useState, useContext } from 'react';
-import { AuthContext } from '../services/AuthContext.js';
 
-const Form1 = ({ formData, handleInputChange, handleSubmit }) => {
-  const { userEmail } = useContext(AuthContext);
+const Form1 = ({ userEmail }) => {
+
+  const [formData, setFormData] = useState({
+    // Personal Info
+    fullName: '',
+    email: '',
+    address: '',
+    phone: '',
+
+    // Living Situation
+    housingType: 'House',
+    otherHousing: '',
+    homeOwnership: 'Own',
+    landlordInfo: 'Yes',
+    outdoorSpace: 'Yes',
+    petsAllowed: 'Yes',
+    otherPets: 'No',
+    otherPetsDesc: '',
+
+    // Employment and Lifestyle
+    hoursAlone: '0',
+    travel: "I don't travel at all",
+    ownedPets: 'No',
+    petCareExperience: '',
+    petReason: '',
+    interestedInDog: false,
+    interestedInCat: false,
+    interestedInOther: false,
+    interestedCustom: '',
+    petAge: 'No',
+    petAgePreference: '',
+    petGenderPreference: 'Male',
+
+    // Health and Safety
+    accessToVet: 'Yes',
+    vetCare: 'Yes',
+    petLocation: 'Indoors',
+    familyAllergies: 'Yes',
+
+    // Commitment to Welfare
+    longTermCommitment: 'Yes',
+    unableToCarePlan: '',
+
+    // Adoption Process
+    adoptionFee: 'Yes',
+    homeVisit: 'Yes',
+    shelterGuidelines: 'Yes',
+  });
+
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Validate if the user email is provided
+    if (!userEmail) {
+      alert('Please log in or provide an email to associate with this form.');
+      return;
+    }
+
+    try {
+      console.log('Submit button clicked');
+      console.log('Current formData:', formData);
+    
+      // Retrieve existing data from localStorage or initialize as empty object
+      const existingData = JSON.parse(localStorage.getItem('formData')) || {};
+
+      console.log('Existing Data from localStorage:', existingData);
+    
+      // Ensure user data exists or initialize it
+      existingData[userEmail] = existingData[userEmail] || {};
+
+      // Assign the form2 data to the user data structure
+      existingData[userEmail].form1 = { ...formData };
+
+      console.log('Data to save:', existingData);
+    
+      // Save the updated data back to localStorage
+      localStorage.setItem('formData', JSON.stringify(existingData));
+    
+      console.log('Data successfully saved to localStorage');
+      alert('Form data saved successfully!');
+    } catch (error) {
+      console.error('Error saving form data:', error);
+      alert('There was an error saving your form data.');
+    }
+  };
+
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={(e) => handleSubmit(e, formData, 'form1')}>
 
     <h2>Personal Information</h2>
     <label htmlFor="fullName">Full Name</label>
@@ -165,7 +257,12 @@ const Form1 = ({ formData, handleInputChange, handleSubmit }) => {
         id="interestedInDog"
         name="interestedInDog"
         checked={formData.interestedInDog}
-        onChange={handleInputChange}
+        onChange={(e) =>
+            setFormData((prev) => ({
+              ...prev,
+              [e.target.name]: e.target.checked,
+            }))
+          }
     />
     <label htmlFor="interestedInDog">Dog</label>
     </div>
@@ -177,7 +274,12 @@ const Form1 = ({ formData, handleInputChange, handleSubmit }) => {
         id="interestedInCat"
         name="interestedInCat"
         checked={formData.interestedInCat}
-        onChange={handleInputChange}
+        onChange={(e) =>
+            setFormData((prev) => ({
+              ...prev,
+              [e.target.name]: e.target.checked,
+            }))
+          }
     />
     <label htmlFor="interestedInCat">Cat</label>
     </div>
@@ -189,7 +291,12 @@ const Form1 = ({ formData, handleInputChange, handleSubmit }) => {
         id="interestedInOther"
         name="interestedInOther"
         checked={formData.interestedInOther}
-        onChange={handleInputChange}
+        onChange={(e) =>
+            setFormData((prev) => ({
+              ...prev,
+              [e.target.name]: e.target.checked,
+            }))
+          }
     />
     <label htmlFor="interestedInOther">Other</label>
     </div>

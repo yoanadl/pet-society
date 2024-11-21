@@ -2,7 +2,11 @@ import React from 'react';
 import './Header.css';
 import pawIcon from '../assets/paw.svg';
 
-function Header({ isLoggedIn, onLogout, openLoginModal }) {
+function Header({ isLoggedIn, onLogout, openLoginModal, aboutUsRef, servicesRef, contactUsRef}) {
+  const handleScrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <header className="header">
       <div id="logo">
@@ -11,14 +15,13 @@ function Header({ isLoggedIn, onLogout, openLoginModal }) {
       </div>
 
       <nav className="header-nav">
-        <a href="#home" className="header-link">Home</a>
-        <a href="#about" className="header-link">About</a>
-        <a href="#contact" className="header-link">Contact Us</a>
+        <a href="#about-us" className="header-link" onClick={(e) => { e.preventDefault(); handleScrollToSection(aboutUsRef); }}>About Us</a>
+        <a href="#contact-us"  className="header-link" onClick={(e) => { e.preventDefault(); handleScrollToSection(contactUsRef); }}>Contact Us</a>
         {!isLoggedIn ? (
           <a href="#login" className="header-link" onClick={openLoginModal}>Login</a>
         ) : (
           <div className='header-nav'> 
-            <a href="#myform" className="header-link">My Form</a>
+            {/* <a href="#myform" className="header-link">My Form</a> */}
             <a href="#logout" className="header-link" onClick={onLogout}>Logout</a>
           </div>
          

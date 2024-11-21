@@ -1,4 +1,5 @@
 {
+  "homepage" : "https://yoanadl.github.io/pet-society",
   "name": "pet-society",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +10,7 @@
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "firebase": "^11.0.1",
+    "gh-pages": "^6.2.0",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
     "react": "^18.3.1",
@@ -20,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

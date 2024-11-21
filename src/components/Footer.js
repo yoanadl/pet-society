@@ -8,16 +8,21 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Footer() {
+function Footer({ aboutUsRef, servicesRef, contactUsRef }) {
 
   const navigate = useNavigate();
   const goToForm = () => {
     navigate('/forms'); 
   };
 
-  const goToAboutUs = () => {
-    navigate('/aboutUs'); 
+  const goToFAQ = () => {
+    navigate('/faqs'); 
   };
+
+  const handleScrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
 
 
@@ -34,9 +39,9 @@ function Footer() {
         </div>
 
         <nav className="footer-nav">
-          <a href="#about-us" className="footer-link" onClick={(e) => { e.preventDefault(); goToAboutUs(); }} >About Us</a>
-          <a href="#services" className="footer-link">Services</a>
-          <a href="#faqs" className="footer-link">FAQs</a>
+          <a href="#about-us" className="footer-link" onClick={(e) => { e.preventDefault(); handleScrollToSection(aboutUsRef); }}>About Us</a>
+          <a href="#services" className="footer-link" onClick={(e) => { e.preventDefault(); handleScrollToSection(servicesRef); }}>Services</a>
+          <a href="#" id="faqs" className="footer-link" onClick={(e) => { e.preventDefault(); goToFAQ(); }}>FAQs</a>             
           <a href="#" id="forms" className="footer-link" onClick={(e) => { e.preventDefault(); goToForm(); }}>Forms</a>          
         </nav>
 

@@ -1,6 +1,6 @@
 /* Login Form Styling */
 .login-container {
-  width: 300px;
+  width: 55vh;
   margin: 100px auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -39,12 +39,11 @@ input:focus {
   outline: none;
 }
 
-.login-button {
+.login-button, .register-button {
   background-color: white;
   padding: 8px 24px;
   color: #333;
   font-size: 1.2rem;
-  font-family: 'cormorant garamond', serif;
   font-weight: 600;
   border: 1px solid #727272;
   border-radius: 5px;
@@ -71,7 +70,7 @@ input:focus {
   text-align: center;
 }
 
-.register-link {
+.register-link, .login-link{
   color: #007bff;
   cursor: pointer;
   text-decoration: underline;
@@ -81,6 +80,9 @@ input:focus {
   color: #0056b3;
 }
 
+.login-container p{
+  text-align: center;
+}
 
 @media (max-width: 496px) {
   .login-container{

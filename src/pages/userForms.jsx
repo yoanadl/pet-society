@@ -7,6 +7,14 @@ const UserFormPage = () => {
   const [formData, setFormData] = useState([]);
   const navigate = useNavigate();
 
+
+  const handleClear = () => {
+    localStorage.clear();
+    alert('Local Storage has been cleared!');
+  };
+  
+
+
   useEffect(() => {
     const keys = Object.keys(localStorage);
 
@@ -58,7 +66,11 @@ const UserFormPage = () => {
 
   return (
     <div className="user-form-page">
+
       <h2>All User Form Data</h2>
+
+      <button onClick={handleClear}>Clear All Data in Local Storage</button>
+
 
       {/* Display form data for all users */}
       {formData.length > 0 ? (
