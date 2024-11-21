@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/pet-society/static/css/main.3815b393.css",
+    "main.js": "/pet-society/static/js/main.7f7f4a4b.js",
+    "static/media/volunteer.svg": "/pet-society/static/media/volunteer.cdfb5b72acd12e891fb076e69821e833.svg",
+    "static/media/instagram.svg": "/pet-society/static/media/instagram.0b541e9faff6586073a1508dd6bc4121.svg",
+    "static/media/donation.svg": "/pet-society/static/media/donation.d5ad39ae65672b82ef01b8e43e581c69.svg",
+    "static/media/paw.svg": "/pet-society/static/media/paw.a09bc048bd3fb84595b66ea91f78b51a.svg",
+    "static/media/tiktok.svg": "/pet-society/static/media/tiktok.63aa1a61bf63ccf0f2c7d0d641316ae3.svg",
+    "static/media/whatsapp.svg": "/pet-society/static/media/whatsapp.842d52561e369366615503770c2ee0e8.svg",
+    "static/media/dog.svg": "/pet-society/static/media/dog.a5f4946f8f3cd9ec20f853c244036c26.svg",
+    "static/media/facebook.svg": "/pet-society/static/media/facebook.fa459c7bf0f6d3885d5e924da9f87758.svg",
+    "static/media/release.svg": "/pet-society/static/media/release.3d28696808d8a29249ed515e8daf7bbf.svg",
+    "index.html": "/pet-society/index.html",
+    "static/media/email.svg": "/pet-society/static/media/email.510d02e43ae2351caa612de3c5960e99.svg",
+    "static/media/adoption.svg": "/pet-society/static/media/adoption.289570a49f731e99a325ad1a99d4e855.svg",
+    "main.3815b393.css.map": "/pet-society/static/css/main.3815b393.css.map",
+    "main.7f7f4a4b.js.map": "/pet-society/static/js/main.7f7f4a4b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3815b393.css",
+    "static/js/main.7f7f4a4b.js"
+  ]
+}
