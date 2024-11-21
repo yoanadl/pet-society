@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pet-society/static/css/main.3815b393.css",
-    "main.js": "/pet-society/static/js/main.7f7f4a4b.js",
+    "main.css": "/pet-society/static/css/main.958ccc4b.css",
+    "main.js": "/pet-society/static/js/main.aa8568eb.js",
     "static/media/volunteer.svg": "/pet-society/static/media/volunteer.cdfb5b72acd12e891fb076e69821e833.svg",
     "static/media/instagram.svg": "/pet-society/static/media/instagram.0b541e9faff6586073a1508dd6bc4121.svg",
     "static/media/donation.svg": "/pet-society/static/media/donation.d5ad39ae65672b82ef01b8e43e581c69.svg",
@@ -14,11 +14,11 @@
     "index.html": "/pet-society/index.html",
     "static/media/email.svg": "/pet-society/static/media/email.510d02e43ae2351caa612de3c5960e99.svg",
     "static/media/adoption.svg": "/pet-society/static/media/adoption.289570a49f731e99a325ad1a99d4e855.svg",
-    "main.3815b393.css.map": "/pet-society/static/css/main.3815b393.css.map",
-    "main.7f7f4a4b.js.map": "/pet-society/static/js/main.7f7f4a4b.js.map"
+    "main.958ccc4b.css.map": "/pet-society/static/css/main.958ccc4b.css.map",
+    "main.aa8568eb.js.map": "/pet-society/static/js/main.aa8568eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.3815b393.css",
-    "static/js/main.7f7f4a4b.js"
+    "static/css/main.958ccc4b.css",
+    "static/js/main.aa8568eb.js"
   ]
 }
